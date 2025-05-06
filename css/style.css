@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.body {
+    background-color: black;
+    color: white;
+}
+
+.left {
+    width: 25vw;
+    padding: 8px;
+    position: relative;
+}
+
+.right {
+    width: 75vw;
+    margin: 13px 0;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.home ul li {
+    width: 14px;
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+.home img {
+    width: 120px;
+}
+
+.heading {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 12px;
+}
+
+.heading h2 {
+    font-size: 16px;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    gap: 14px;
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    color: #989898;
+}
+
+.library {
+    min-height: 80vh;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(49, 48, 48);
+}
+
+.header>* {
+    padding: 20px;
+}
+
+.playlists {
+    padding: 23px;
+}
+
+.playlists .head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 127px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(34, 33, 33);
+    position: relative;
+    transition: all 0.5s;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.card:hover {
+    background-color: rgb(27, 23, 23);
+    cursor: pointer;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    transition: 0.2s ease-in-out;
+}
+
+.card:hover .play {
+    opacity: 1;
+    top: 100px;
+}
+
+.cardContainer {
+    margin: 10px;
+    padding: 4px;
+    gap: 8px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 60vh;
+
+}
+
+.popular-artists .head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-artists {
+    padding: 23px;
+}
+
+.popular-artists .card img {
+    width: 100%;
+    height: 70%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.play {
+    width: 40px;
+    height: 40px;
+    background-color: #3BE477;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 2px;
+    top: 110px;
+    right: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+.play svg {
+    width: 30px;
+    height: 25px;
+    fill: black;
+}
+
+
+.signupbtn {
+    color: rgb(129, 129, 129);
+    font-size: 15px;
+    background-color: rgb(49, 48, 48);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.signupbtn:hover {
+    color: white;
+    font-size: 16px;
+}
+
+.buttons>* {
+    margin: 0 12px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav button:not(:last-child) {
+    margin-right: 15px;
+}
+
+.hamburger,
+.close {
+    display: none;
+}
+
+.loginbtn {
+    font-weight: bold;
+    width: 75px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 23px;
+    font-size: 15px;
+    position: relative;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.loginbtn:hover {
+    transform: scale(1.09);
+    /* Expand the button without affecting surrounding content */
+    font-weight: bold;
+    /* Adjust font size */
+}
+
+.playbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    filter: invert(1);
+    background: #e2d9d9;
+    border-radius: 10px;
+    width: 70vw;
+    min-height: 40px;
+    padding: 12px;
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 0 0 auto;
+    margin-left: 120px;
+}
+
+.songlist ul {
+    padding: 0 12px;
+}
+
+.songlist ul li {
+    list-style-type: decimal;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px 0;
+    border: 1px solid rgba(146, 143, 143, 0.491);
+    margin: 12px 0;
+    padding: 13px;
+    border-radius: 5px;
+}
+
+.songlist .info {
+    font-size: 12px;
+    width: 344px;
+}
+
+.songlist {
+    height: 400px;
+    overflow: auto;
+    margin-bottom: 65px;
+}
+
+.playnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playnow span {
+    font-size: 12px;
+    width: 65px;
+    padding: 12px;
+}
+
+/* Scrollbar for dark theme */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c;
+    /* Darker background for track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    /* Dark gray thumb */
+    border-radius: 6px;
+    border: 3px solid #2c2c2c;
+    /* Padding around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+    /* Lighter gray on hover */
+}
+
+.seekbar {
+    width: 93%;
+    background: black;
+    top: 0;
+    position: absolute;
+    border-radius: 30px;
+    height: 3px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: black;
+    position: relative;
+    bottom: 4px;
+    left: 0%;
+    transition: left 0.5s;
+}
+
+.songbuttons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.musicbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.songinfo {
+    flex: 1;
+    text-align: left;
+    padding: 0 12px;
+    color: black;
+}
+
+.info div {
+    padding-top: 10px;
+}
+
+.songtime {
+    flex: 1;
+    text-align: right;
+    padding: 0 12px;
+    color: black;
+}
+
+.volume {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.hamburgerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (max-width: 1200px) {
+    .left {
+        position: absolute;
+        left: -100%;
+        transition: all .3s;
+        z-index: 1;
+        width: 353px;
+        background-color: black;
+        padding: 0;
+    }
+
+    .left .close {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .right {
+        width: 100vw;
+    }
+
+    .playbar {
+        width: 85vw;
+        left: 20px;
+    }
+
+    .seekbar {
+        width: 85vw;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .right {
+        margin: 0;
+    }
+
+    .card {
+        width: 50vw;
+    }
+
+    .cardContainer {
+        margin: 0;
+        justify-content: center;
+        max-height: 45vh;
+    }
+    .musicbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 23px;
+    }
+    .songbuttons{
+        margin: 0;
+    }
+    .songinfo{
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: auto;
+    }
+    .left{
+        left: -120%;
+    }
+    .cardContainer{
+        margin: auto;
+    }
+}
